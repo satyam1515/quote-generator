@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quote Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Quote Generator</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <div class="background"></div>
+
   <div class="container">
-    <h1>Random Quote Generator</h1>
+    <h1>Quote Generator</h1>
+
+    <select id="category">
+      <option value="all">All Quotes</option>
+      <option value="motivation">Motivation</option>
+      <option value="success">Success</option>
+      <option value="life">Life</option>
+    </select>
 
     <p id="quote">Click the button to get a quote!</p>
 
-    <button onclick="generateQuote()">New Quote</button>
+    <div class="buttons">
+      <button onclick="generateQuote()">New Quote</button>
+      <button onclick="copyQuote()">Copy Quote</button>
+      <button onclick="toggleDarkMode()">Dark Mode</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
